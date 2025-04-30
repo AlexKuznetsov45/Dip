@@ -35,5 +35,7 @@ class TestSearchInterface:
 
         with allure.step("Проверяю наличие результата поиска"):
             result_text = search_results.text
-            assert "Матрица" in result_text, "Название фильма отсутствует среди результатов поиска!"
-            assert "результаты:" in result_text, "Количество результатов не отображается!"
+        assert "Матрица" in result_text, \
+            "Названия фильма нет среди результатов поиска!"
+        assert "результаты:" in result_text, \
+            "Количество результатов не отображается!"

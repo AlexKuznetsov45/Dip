@@ -1,4 +1,3 @@
-from common.api_client import ApiClient
 
 
 class SearchResultsPage:

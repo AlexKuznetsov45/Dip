@@ -10,8 +10,7 @@ class MainPage(BasePage):
     def open_homepage(self):
         """Переход на главную страницу с ожиданием загрузки."""
         self.open_url(self.BASE_URL)
-        # Ждём появления элемента на странице (например, поля поиска),
-        # чтобы убедиться, что страница полностью загрузилась
+        # Ждём появления элемента на странице (например, поля поиска)
         self.wait_until_visible(COMMON["search_field"])
 
     def perform_search(self, query):
@@ -59,5 +58,5 @@ class MainPage(BasePage):
         search_field.send_keys(query)  # Вводим искомый текст
 
     def wait_for_dropdown_list(self):
-        """Ожидание появления выпадающего списка после ввода текста в поиске."""
+        """Ожидание появления выпадающего списка в поиске."""
         self.wait_until_visible(MAIN_PAGE["dropdown_list"])

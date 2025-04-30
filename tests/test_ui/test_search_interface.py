@@ -11,7 +11,7 @@ class TestPossibleTitlesAppear:
     @allure.story("Появление блока 'Возможно, вы искали'")
     def test_possible_titles_appear(self, browser):
         """
-        Проверка появления блока 'Возможно, вы искали' при вводе названия фильма.
+        Проверка блока 'Возможно, вы искали' при вводе названия фильма.
         """
         main_page = MainPage(browser)
 
@@ -27,4 +27,5 @@ class TestPossibleTitlesAppear:
         with allure.step("Проверка наличия текста 'Возможно, вы искали'"):
             possible_titles_block = main_page.find_element(
                 *MAIN_PAGE["possible_titles_block"])
-            assert "Возможно, вы искали" in possible_titles_block.text, "Текст 'Возможно, вы искали' не появился."
+        assert "Возможно, вы искали" in possible_titles_block.text, \
+            "Текст не появился."

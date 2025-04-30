@@ -15,4 +15,4 @@ def test_search_films_with_incorrect_method(api_client):
     payload = {"keyword": "мстители", "page": 1}
     response = requests.post(
         api_client.base_url, headers=headers, params=payload)
-    assert response.status_code == 500  # Проверяем, что сервер возвращает ошибку 500
+    assert response.status_code == 500

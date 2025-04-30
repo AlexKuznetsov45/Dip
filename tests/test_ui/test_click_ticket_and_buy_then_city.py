@@ -39,5 +39,5 @@ class TestTicketAndBuyThenCitySelect:
             main_page.click_element(*MAIN_PAGE["city_select"])
 
         with allure.step("Проверка процесса выбора города"):
-            # Тут можно добавить дополнительную проверку, например, наличие списка городов.
+
             pass

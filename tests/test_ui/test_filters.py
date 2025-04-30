@@ -24,4 +24,4 @@ class TestFiltersButtonClick:
         with allure.step("Проверяю, что раздел с фильтрами отображается"):
             filters_section = main_page.find_element(
                 *MAIN_PAGE["filter_section"])
-            assert filters_section.is_displayed(), "Раздел с фильтрами не отображается!"
+            assert filters_section.is_displayed(), "Раздел не отображается!"

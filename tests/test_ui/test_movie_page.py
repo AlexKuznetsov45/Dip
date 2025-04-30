@@ -23,14 +23,14 @@ class TestFirstResultSelection:
             main_page.input_search_query("Матрица")
 
         with allure.step("Ожидание загрузки выпадающего списка"):
-            main_page.wait_for_dropdown_list()  # Дожидаемся появления выпадающего списка
+            main_page.wait_for_dropdown_list()  # Дожидаемся появления списка
 
         with allure.step("Выбор первого результата поиска"):
             main_page.select_first_search_result()
 
-        with allure.step("Проверка информации о выбранном фильме (заголовок и рейтинг)"):
+        with allure.step("Проверка информации о фильме (заголовок и рейтинг)"):
             movie_title = movie_page.get_movie_title()
-            assert "Матрица (1999)" in movie_title, "Заголовок фильма отличается от ожидаемого."
+            assert "Матрица (1999)" in movie_title, "Заголовок не совпадает."
 
             movie_rating = movie_page.get_movie_rating()
             assert abs(movie_rating -
