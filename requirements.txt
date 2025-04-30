@@ -1,0 +1,4 @@
+# Список используемых библиотек для проекта:
+selenium==4.x.x
+pytest==8.x.x
+allure-pytest==2.x.x
